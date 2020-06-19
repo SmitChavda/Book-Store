@@ -76,34 +76,6 @@
                     Id
                     consectetur purus ut faucibus pulvinar elementum integer.
                 </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Auctor urna nunc id cursus metus. Faucibus turpis in eu mi. Ipsum faucibus
-                    vitae
-                    aliquet nec ullamcorper sit amet risus nullam. Libero justo laoreet sit amet cursus. Sem viverra
-                    aliquet
-                    eget sit amet tellus cras adipiscing enim. Adipiscing diam donec adipiscing tristique risus nec
-                    feugiat
-                    in
-                    fermentum. Posuere sollicitudin aliquam ultrices sagittis orci a. Ultrices dui sapien eget mi proin.
-                    Id
-                    consectetur purus ut faucibus pulvinar elementum integer.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Auctor urna nunc id cursus metus. Faucibus turpis in eu mi. Ipsum faucibus
-                    vitae
-                    aliquet nec ullamcorper sit amet risus nullam. Libero justo laoreet sit amet cursus. Sem viverra
-                    aliquet
-                    eget sit amet tellus cras adipiscing enim. Adipiscing diam donec adipiscing tristique risus nec
-                    feugiat
-                    in
-                    fermentum. Posuere sollicitudin aliquam ultrices sagittis orci a. Ultrices dui sapien eget mi proin.
-                    Id
-                    consectetur purus ut faucibus pulvinar elementum integer.
-                </p>
             </div>
         </div>
         <div class="container">
@@ -154,49 +126,60 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 xyz">
-                <div class="row">
-                    <div class="abc">
-                        <h1>Make A Reservation</h1>
-                    </div>
+                <form action="/" method="post">
+                    <div class="row">
+                        <div class="abc">
+                            <h1>Make A Reservation</h1>
+                        </div>
+                        <!-- <form action="/" method="post"> -->
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input id="name" class="form-control" type="text" name="name" placeholder="Enter Name"
+                                    required autofocus>
+                            </div>
+                        </div>
 
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input id="name" class="form-control" type="text" name="name" placeholder="Enter Name">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="Email">Email</label>
+                                <input id="Email" class="form-control" type="text" name="Email"
+                                    placeholder="Enter Email" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="Email">Email</label>
-                            <input id="Email" class="form-control" type="text" name="Email" placeholder="Enter Email">
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="number">Phone Number</label>
+                                <input id="number" class="form-control" type="text" name="Number"
+                                    placeholder="Enter Number" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="number">Phone Number</label>
-                            <input id="number" class="form-control" type="text" name="Number"
-                                placeholder="Enter Number">
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="time">Time</label>
+                                <input id="time" class="form-control" type="text" name="time" placeholder="Enter Time"
+                                    required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="time">Time</label>
-                            <input id="time" class="form-control" type="text" name="time" placeholder="Enter Time">
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="persons">Persons</label>
+                                <input id="persons" class="form-control" type="text" name="persons"
+                                    placeholder="Enter total Persons" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="persons">Persons</label>
-                            <input id="persons" class="form-control" type="text" name="persons"
-                                placeholder="Enter total Persons">
+
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-outline-light">Submit</button>
+                            </div>
                         </div>
+                        <!-- </form> -->
                     </div>
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <button type="button" class="btn btn-outline-light">Submit</button>
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
             <div class="col-sm-6">
                 <iframe
