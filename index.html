@@ -5,23 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Name</title>
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
+
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Animation on Scroll Files -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Local Files -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
     <div class="container-fluid background">
+
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light color">
             <a class="navbar-brand">Restaurant Logo</a>
             <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
@@ -51,18 +63,21 @@
                 </form>
             </div>
         </nav>
+
+        <!-- Title -->
         <div class="position">
-            <h1 class="style-heading">Restaurant Name</h1>
+            <h1 class="style-heading" data-aos="fade-right">Restaurant Name</h1>
             <div class="button-style">
-                <button class="btn btn-outline-light btn-lg download-button" type="button"
-                    style="margin-right: 30px;">Order Now</button>
-                <button class="btn btn-outline-light btn-lg download-button" type="button">View Menu</button>
+                <button id="lead" class="btn btn-outline-light btn-lg download-button" type="button"
+                    style="margin-right: 30px;" data-aos="fade-right">Book Now</button>
+                <button class="btn btn-outline-light btn-lg download-button" type="button" data-aos="fade-right">View
+                    Menu</button>
             </div>
         </div>
-        <div class="div-background">
+        <div class="div-background" data-aos="fade-up">
             <div class="div-padding">
-                <h1 class="header">About Us</h1>
-                <p>
+                <h1 class="header" data-aos="fade-up" data-aos-delay="1500">About Us</h1>
+                <p data-aos="fade-up" data-aos-delay="2000">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
                     dolore magna aliqua. Auctor urna nunc id cursus metus. Faucibus turpis in eu mi. Ipsum faucibus
@@ -78,54 +93,56 @@
                 </p>
             </div>
         </div>
-        <div class="container">
+
+        <div class="container" data-aos="fade-right">
             <div class="row" style="padding-left: 85px;">
                 <div class="col-sm-3 edit">
-                    <h3>18</h3>
-                    <p>Years of Experience</p>
+                    <h3 data-aos="fade-up">18</h3>
+                    <p data-aos="fade-up">Years of Experience</p>
                 </div>
                 <div class="col-sm-3 edit">
-                    <h3>15000</h3>
-                    <p>Happy Customers</p>
+                    <h3 data-aos="fade-up">15000</h3>
+                    <p data-aos="fade-up">Happy Customers</p>
                 </div>
                 <div class="col-sm-3 edit">
-                    <h3>100</h3>
-                    <p>Menus</p>
+                    <h3 data-aos="fade-up">100</h3>
+                    <p data-aos="fade-up">Menus</p>
                 </div>
                 <div class="col-sm-3 edit">
-                    <h3>20</h3>
-                    <p>Staffs</p>
+                    <h3 data-aos="fade-up">20</h3>
+                    <p data-aos="fade-up">Staffs</p>
                 </div>
             </div>
         </div>
-        <div class="div-background">
+
+        <div class="div-background" data-aos="fade-right">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <i class="fa fa-birthday-cake fa-4x" aria-hidden="true"></i>
-                        <p class="pading">Even the all-powerful Pointing has no control about the blind texts it is an
-                            almost
-                            unorthographic.</p>
+                        <i class="fa fa-birthday-cake fa-4x" aria-hidden="true" data-aos="fade-right"></i>
+                        <p class="pading" data-aos="fade-right">Even the all-powerful Pointing has
+                            no control about the blind texts it is an almost unorthographic.</p>
                     </div>
                     <div class="col-md-4">
-                        <i class="fa fa-building fa-4x" aria-hidden="true"></i>
-                        <p class="pading">Even the all-powerful Pointing has no control about the blind texts it is an
-                            almost
-                            unorthographic.</p>
+                        <i class="fa fa-building fa-4x" aria-hidden="true" data-aos="fade-right"></i>
+                        <p class="pading" data-aos="fade-right">Even the all-powerful Pointing has
+                            no control about the blind texts it is an almost unorthographic.</p>
                     </div>
                     <div class="col-md-4">
-                        <i class="fa fa-cutlery fa-4x" aria-hidden="true"></i>
-                        <p class="pading">Even the all-powerful Pointing has no control about the blind texts it is an
-                            almost
-                            unorthographic.</p>
+                        <i class="fa fa-cutlery fa-4x" aria-hidden="true" data-aos="fade-right"></i>
+                        <p class="pading" data-aos="fade-right">Even the all-powerful Pointing has
+                            no control about the blind texts it is an almost unorthographic.</p>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
+
+    <!-- Reservation -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 xyz">
+            <div class="col-md-6 xyz" data-aos="fade-up">
                 <form action="/" method="post">
                     <div class="row">
                         <div class="abc">
@@ -136,7 +153,7 @@
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input id="name" class="form-control" type="text" name="name" placeholder="Enter Name"
-                                    required autofocus>
+                                    required>
                             </div>
                         </div>
 
@@ -181,7 +198,8 @@
                     </div>
                 </form>
             </div>
-            <div class="col-sm-6">
+
+            <div class="col-sm-6" data-aos="fade-down">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14844.547864280572!2d70.4636599!3d21.5414991!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2669c6919ea7d122!2sThe%20Grand%20Patel!5e0!3m2!1sen!2sin!4v1586269360157!5m2!1sen!2sin"
                     width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
@@ -190,7 +208,8 @@
         </div>
     </div>
 
-    <footer id="footer">
+    <!-- Footers -->
+    <footer id="footer" data-aos="fade-down">
         <h1>Find Us on Social Media</h1>
         <i class="fa fa-twitter pad" aria-hidden="true"></i>
         <i class="fa fa-facebook pad" aria-hidden="true"></i>
@@ -200,6 +219,12 @@
         <p id="paragraph">© Copyright 2020 Restaurant Name</p>
 
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
