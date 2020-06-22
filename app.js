@@ -31,10 +31,11 @@ app.post("/", (req, res) => {
 
 app.get("/:route", (req, res) => {
   var paramsValue = req.params.route;
-//   console.log(paramsValue);
-  res.write("<h1>" + paramsValue + " Called</h1>");
-  res.write("<h1>Welcome to " + paramsValue + "</h1>");
-  res.send();
+  //   console.log(paramsValue);
+  // res.write("<h1>" + paramsValue + " Called</h1>");
+  // res.write("<h1>Welcome to " + paramsValue + "</h1>");
+  // res.send();
+  res.sendFile(__dirname + "/" + paramsValue + ".html");
 });
 
 app.listen(port, () => {

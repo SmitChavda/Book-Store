@@ -4,7 +4,7 @@ AOS.init({
     duration: 2000
 });
 
-$("#lead").click(() => {
+$(".lead").click(() => {
     // alert("CLick activated");
     $('html,body').animate({
         scrollTop: $('#name').offset.top
