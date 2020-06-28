@@ -15,7 +15,7 @@ app.use(express.static("public"));
 var object = [];
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile(__dirname + "/Views/index.html");
 });
 
 app.post("/", (req, res) => {
@@ -31,11 +31,12 @@ app.post("/", (req, res) => {
 
 app.get("/:route", (req, res) => {
   var paramsValue = req.params.route;
-  //   console.log(paramsValue);
-  // res.write("<h1>" + paramsValue + " Called</h1>");
-  // res.write("<h1>Welcome to " + paramsValue + "</h1>");
-  // res.send();
-  res.sendFile(__dirname + "/" + paramsValue + ".html");
+
+  res.sendFile(__dirname + "/Views/" + paramsValue + ".html");
+});
+
+app.post("/:route", (req, res) => {
+  //Post request from contact.html
 });
 
 app.listen(port, () => {
