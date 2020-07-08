@@ -2,6 +2,7 @@
 
 const express = require("express");
 const parser = require("body-parser");
+const ejs = require("ejs");
 const app = express();
 const port = process.env.PORT || 3000;
 app.use(
@@ -10,12 +11,15 @@ app.use(
   })
 );
 
+app.set("view engine", "ejs")
+
 app.use(express.static("public"));
 
 var object = [];
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/Views/index.html");
+  // res.sendFile(__dirname + "/Views/index.html");
+  res.render("index");
 });
 
 app.post("/", (req, res) => {
@@ -31,8 +35,7 @@ app.post("/", (req, res) => {
 
 app.get("/:route", (req, res) => {
   var paramsValue = req.params.route;
-
-  res.sendFile(__dirname + "/Views/" + paramsValue + ".html");
+  res.render(paramsValue);
 });
 
 app.post("/:route", (req, res) => {

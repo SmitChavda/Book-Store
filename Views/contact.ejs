@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("partials/head.ejs"); -%>
+</head>
+
+<body>
+  <div class="container-fluid background">
+    <!-- Navbar -->
+    <%- include("partials/header.ejs");  -%> 
+    <!-- Title -->
+    <div class="position">
+      <h1 class="style-heading" data-aos="fade-right">Contact Us</h1>
+    </div>
+
+    <div class="div-background" data-aos="fade-up">
+      <div class="div-padding">
+        <h1 class="header" data-aos="fade-up" data-aos-delay="1500">
+          Contact Us
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="2000">
+          Want to talk business? Have any queries? Fill the form below and we will reach out to you.
+        </p>
+        <div class="container">
+          <form action="/contact" method="post">
+            <div class="row abc">
+
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input id="name" class="form-control" type="text" name="username" placeholder="Enter Name" required />
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input id="email" class="form-control" type="email" name="useremail" placeholder="Enter email"
+                    required />
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" class="form-control" name="message" placeholder="Enter Message" required
+                    rows="4" cols="50"></textarea>
+                </div>
+              </div>
+
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <button type="submit" class="btn btn-outline-dark">
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="div-background abc">
+      <h1>Contact Info</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input id="name" class="form-control" type="text" name="username" placeholder="Enter Name" required />
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="name">Email</label>
+              <input id="name" class="form-control" type="email" name="useremail" placeholder="Enter email" required />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Footers -->
+    <%- include("partials/footer.ejs");  -%> 
+
+    <%- include("partials/script.ejs");  -%> 
+</body>
+
+</html>
