@@ -8,10 +8,10 @@
 <body>
   <div class="container-fluid background">
     <!-- Navbar -->
-      <%- include("partials/header.ejs");  -%> 
+    <%- include("partials/header.ejs");  -%>
     <!-- Title -->
     <div class="position">
-      <h1 class="style-heading" data-aos="fade-right">Restaurant Name</h1>
+      <h1 class="style-heading" data-aos="fade-right"><%- name %> </h1>
       <div class="button-style">
         <button class="btn btn-outline-light btn-lg download-button lead" type="button" style="margin-right: 30px;"
           data-aos="fade-right">
@@ -29,15 +29,7 @@
           About Us
         </h1>
         <p data-aos="fade-up" data-aos-delay="2000">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor
-          urna nunc id cursus metus. Faucibus turpis in eu mi. Ipsum faucibus
-          vitae aliquet nec ullamcorper sit amet risus nullam. Libero justo
-          laoreet sit amet cursus. Sem viverra aliquet eget sit amet tellus
-          cras adipiscing enim. Adipiscing diam donec adipiscing tristique
-          risus nec feugiat in fermentum. Posuere sollicitudin aliquam
-          ultrices sagittis orci a. Ultrices dui sapien eget mi proin. Id
-          consectetur purus ut faucibus pulvinar elementum integer.
+          <%- about %> 
         </p>
       </div>
     </div>
@@ -45,7 +37,7 @@
     <div class="container" data-aos="fade-right">
       <div class="row" style="padding-left: 85px;">
         <div class="col-sm-3 edit">
-          <h3 data-aos="fade-up">18</h3>
+          <h3 data-aos="fade-up">18 </h3>
           <p data-aos="fade-up">Years of Experience</p>
         </div>
         <div class="col-sm-3 edit">
@@ -93,7 +85,7 @@
   </div>
 
   <!-- Reservation -->
-  <div class="container-fluid">
+  <div class="container-fluid font-weight-bold">
     <div class="row">
       <div class="col-md-6 xyz" data-aos="fade-up">
         <form action="/" method="post">
@@ -126,7 +118,8 @@
             <div class="col-sm-6">
               <div class="form-group">
                 <label for="time">Time</label>
-                <input id="time" class="form-control" type="text" name="time" placeholder="Enter Time" required />
+                <input id="time" class="form-control" type="date" name="time"
+                  placeholder="Enter Time in 24 hours format" required />
               </div>
             </div>
 
@@ -160,9 +153,9 @@
   </div>
 
   <!-- Footers -->
-  <%- include("partials/footer.ejs");  -%> 
+  <%- include("partials/footer.ejs");  -%>
 
-<%- include("partials/script.ejs");  -%> 
+  <%- include("partials/script.ejs");  -%>
 </body>
 
 </html>
