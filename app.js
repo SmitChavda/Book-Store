@@ -9,6 +9,7 @@ const mongoose = require("mongoose");
 const app = express();
 const port = process.env.PORT || 3000;
 
+//Mongodb connection string
 mongoose.connect("mongodb://localhost:27017/Restaurantdb", {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -24,8 +25,17 @@ const contact = mongoose.Schema({
   timestamps: true
 });
 
+const reservation = mongoose.Schema({
+  name: String,
+  email: String,
+  number: Number,
+  time: String,
+  person: Number
+});
+
 //Model For Table
 const contactModel = mongoose.model('contact', contact);
+const reservModel = mongoose.model('reservation', reservation);
 
 app.use(
   parser.urlencoded({
@@ -38,6 +48,7 @@ app.set("view engine", "ejs");
 
 var object = [];
 var contactData = [];
+var items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", ];
 var title = "Tulsi Diner";
 var about = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Auctor urna nunc id cursus metus.Faucibus turpis in eu mi.Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam.Libero justo laoreet sit amet cursus.Sem viverra aliquet eget sit amet tellus cras adipiscing enim.Adipiscing diam donec adipiscing tristique risus nec feugiat in fermentum.Posuere sollicitudin aliquam ultrices sagittis orci a.Ultrices dui sapien eget mi proin.Id consectetur purus ut faucibus pulvinar elementum integer."
 
@@ -60,12 +71,25 @@ app.post("/", (req, res) => {
   };
 
   console.log(object);
+
+  reservModel.create(object, (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Document added");
+      res.render("response", {
+        query: "Your Reservation is received.",
+        message: "You will receive the email/sms for the confirmation of your Reservation."
+      });
+    }
+  });
 });
 
 app.get("/:route", (req, res) => {
   var paramsValue = req.params.route;
   res.render(paramsValue, {
-    about: about
+    about: about,
+    itemlist: items
   });
 });
 
@@ -82,7 +106,10 @@ app.post("/contact", (req, res, next) => {
       console.log(err);
     } else {
       console.log("Document added");
-      res.render("response");
+      res.render("response", {
+        query: "Your Message has been Received",
+        message: "Our Staff will contact you as soon as possible.Thank you for your feedback"
+      });
     }
   });
 });

@@ -6,14 +6,23 @@
 </head>
 
 <body>
-    <div style="background-color: black;">
-        <%- include("partials/header.ejs");  -%>
-        <h1>
-            Your requst is successfully received.
-            Xyz your response here.
-        </h1>
-        <button onclick="location.href='/'" class="btn btn-outline-light">Go to HomePage</button>
+    <div class="response-background">
+        <%- include("partials/header.ejs"); -%>
+        <div class="jumbotron jumbotron-fluid mb-0 pt-0" data-aos="fade-right">
+            <div class="container">
+                <h1 class="display-4 font-weight-bold"><%- query %> </h1>
+                <p class="lead">
+                    <%- message %> 
+                </p>
+                <button class="btn btn-outline-dark btn-lg mt-2" onclick="location.href='/'">Click here to go to Homepage.</button>
+            </div>
+        </div>
     </div>
+
+    <!-- Footers -->
+    <%- include("partials/footer.ejs");  -%>
+
+    <%- include("partials/script.ejs");  -%>
 </body>
 
 </html>

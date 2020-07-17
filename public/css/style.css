@@ -41,6 +41,22 @@
     padding: 60px 0;
 }
 
+.transparent {
+    background-color: rgba(245, 245, 245, 0.7);
+}
+
+.bgpicture {
+    background-image: linear-gradient(to bottom, rgba(1, 1, 2, 0.52), rgba(22, 21, 22, 0.73)), url('../images/bg_2.jpg');
+}
+
+.aboutpicture {
+    background-image: linear-gradient(to bottom, rgba(1, 1, 2, 0.52), rgba(22, 21, 22, 0.73)), url('../images/about.jpg');
+}
+
+.contimage {
+    background-image: linear-gradient(to bottom, rgba(1, 1, 2, 0.52), rgba(22, 21, 22, 0.73)), url('../images/image_4.jpg');
+}
+
 .header {
     text-align: center;
     /* color: azure; */
@@ -98,6 +114,16 @@ i {
 .xyz {
     background-image: url('../images/image_6.jpg');
     color: ghostwhite;
+}
+
+.jumbotron {
+    background-color: rgba(233, 236, 239, 0.5);
+}
+
+.response-background {
+    background-image: url('../images/insta-5.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 @media screen and (max-width:960px) {
